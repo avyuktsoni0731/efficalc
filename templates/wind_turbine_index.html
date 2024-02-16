@@ -49,7 +49,7 @@
       <a class="nav-link " href="/wind_turbine" style="font-family: 'Garamond', serif;font-size: 30px; background-color: #0000FF; color: #000000; font-weight: bold;" >Wind Turbine</a>
     </li>
     <li class="nav-item ms-1 me-2">
-      <a class="nav-link " href="/solarcell" style="font-family: 'Garamond', serif ;font-size: 30px; background-color: #0000FF; color: #000000; font-weight: bold;">Solar Cell</a>
+      <a class="nav-link " href="/solar_cell" style="font-family: 'Garamond', serif ;font-size: 30px; background-color: #0000FF; color: #000000; font-weight: bold;">Solar Cell</a>
     </li>
   </ul>
   <div class="container mt-5">
@@ -58,9 +58,28 @@
         <h1 class="mb-3 mt-3" style="font-family: 'Garamond', serif ;font-size: 50px;font-weight: bold;">Wind Turbine Efficiency</h1>
         <form method="post" class="custom-form">
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Rotor
-              Radius:</label>
-            <input type="text" class="form-control" id="rotorRadius" name="rotorRadius">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Temperature (2m above ground):</label>
+            <input type="text" class="form-control" id="temperature_2m" name="temperature_2m">
+          </div>
+          <div class="mb-3 text-center">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Relative Humidity (2m above ground):</label>
+            <input type="text" class="form-control" id="relativehumidity_2m" name="relativehumidity_2m">
+          </div>
+          <div class="mb-3 text-center">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Dew Point (2m above ground) :</label>
+            <input type="text" class="form-control" id="dewpoint_2m" name="dewpoint_2m">
+          </div>
+          <div class="mb-3 text-center">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed (10m above ground):</label>
+            <input type="text" class="form-control" id="windspeed_10m" name="windspeed_10m">
+          </div>
+          <div class="mb-3 text-center">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed (100m above ground):</label>
+            <input type="text" class="form-control" id="windspeed_100m" name="windspeed_100m">
+          </div>
+          <div class="mb-3 text-center">
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Gusts (10m above ground):</label>
+            <input type="text" class="form-control" id="windgusts_10m" name="windgusts_10m">
           </div>
           <div class="text-center">
           <button type="submit" class="btn btn-success">Submit</button>

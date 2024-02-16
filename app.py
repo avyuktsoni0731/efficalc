@@ -20,25 +20,33 @@ input_data_sc.to_csv('./data/input_sc.csv', index=False)
 
 ## app.routes and functions for devices
 @app.route('/wind_turbine',methods=['GET', 'POST'])
-def rotor_rad():
+def wind_turbine():
+    parametersWindTurbine = []
+    
     if request.method == 'POST':
-        rotor_radius = float(request.form.get('rotorRadius'))
+        temperature_2m = float(request.form.get('temperature_2m'))
+        relativehumidity_2m = float(request.form.get('relativehumidity_2m'))
+        dewpoint_2m = float(request.form.get('dewpoint_2m'))
+        windspeed_10m = float(request.form.get('windspeed_10m'))
+        windspeed_100m = float(request.form.get('windspeed_100m'))
+        windgusts_10m = float(request.form.get('windgusts_10m'))
+        parametersWindTurbine.extend([temperature_2m, relativehumidity_2m, dewpoint_2m, windspeed_10m, windspeed_100m, windgusts_10m])
         
-        def calculate_efficiency(power_out):
-            efficiency = round((power_out / power_input) * 100, 2)
-            eff_data.append(efficiency)
+        # def calculate_efficiency(power_out):
+        #     efficiency = round((power_out / power_input) * 100, 2)
+        #     eff_data.append(efficiency)
 
-        eff_data = []
-        k=len(input_data_wt)
+        # eff_data = []
+        # k=len(input_data_wt)
         
-        for i in range(0,k):
-            wind_speed = w_speed.loc[i].item()
-            power_out = p_out.loc[i].item()
-            if wind_speed<3 or wind_speed>20:
-                eff_data.append(0)
-            else:
-                power_input = 0.5*3.14*1.204*rotor_radius*wind_speed
-                calculate_efficiency(power_out)
+        # for i in range(0,k):
+        #     wind_speed = w_speed.loc[i].item()
+        #     power_out = p_out.loc[i].item()
+        #     if wind_speed<3 or wind_speed>20:
+        #         eff_data.append(0)
+        #     else:
+        #         power_input = 0.5*3.14*1.204*rotor_radius*wind_speed
+        #         calculate_efficiency(power_out)
         
         dict = {'Efficiency': eff_data}
         df = pd.DataFrame(dict)
@@ -53,8 +61,8 @@ def rotor_rad():
         
     return render_template('wind_turbine_index.html', tables=[data.to_html()], titles=[''])
 
-@app.route('/solarcell',methods=['GET', 'POST'])
-def solarcell():
+@app.route('/solar_cell',methods=['GET', 'POST'])
+def solar_cell():
     if request.method == 'POST':
         P_in = float(request.form.get('p_in'))
 
