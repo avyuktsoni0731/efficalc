@@ -10,7 +10,6 @@ class Windmill:
         result = self.model.predict(parameters)
         return result[0]
 
-
 class SolarCell:
     filename = './models/solar_cell.sav'
 

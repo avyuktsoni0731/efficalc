@@ -21,7 +21,7 @@ def wind_turbine():
         parametersWindTurbine = parametersWindTurbine.reshape(1, 6)
         
         windTurbine = Windmill()
-        returnedEfficiency = round(windTurbine.predict(parametersWindTurbine), 3)*100
+        returnedEfficiency = round(windTurbine.predict(parametersWindTurbine), 6)*100
         
         return render_template('wind_turbine_index.html', returnedEfficiency=returnedEfficiency)
     return render_template('wind_turbine_index.html')
@@ -49,7 +49,7 @@ def solar_cell():
         parametersSolarCell = parametersSolarCell.reshape(1, 11)
 
         solarCell = SolarCell()
-        returnedEfficiency = round(solarCell.predict(parametersSolarCell), 3)*100
+        returnedEfficiency = round(solarCell.predict(parametersSolarCell), 6)*100
         
         return render_template('solar_cell_index.html', returnedEfficiency=returnedEfficiency)
     return render_template('solar_cell_index.html')
