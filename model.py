@@ -1,10 +1,12 @@
-import sklearn, pickle
+import pickle
+import joblib
+
 
 class Windmill:
-    filename = './models/wind_turbine.sav'
+    filename = 'models/wind_turbine.sav'
 
     def __init__(self, filename = filename):
-        self.model = pickle.load(open(filename, 'rb'))
+        self.model = joblib.load(open(filename, 'rb'))
 
     def predict(self, parameters):
         result = self.model.predict(parameters)
@@ -12,10 +14,10 @@ class Windmill:
 
 
 class SolarCell:
-    filename = './models/solar_cell.sav'
+    filename = 'models/solar_cell.sav'
 
     def __init__(self, filename = filename):
-        self.model = pickle.load(open(filename, 'rb'))
+        self.model = joblib.load(filename)
 
     def predict(self, parameters):
         result = self.model.predict(parameters)
