@@ -1,7 +1,6 @@
 import pickle
 import joblib
 
-
 class Windmill:
     filename = 'models/wind_turbine.sav'
 
@@ -10,8 +9,7 @@ class Windmill:
 
     def predict(self, parameters):
         result = self.model.predict(parameters)
-        return result
-
+        return result[0]
 
 class SolarCell:
     filename = 'models/solar_cell.sav'
@@ -21,4 +19,4 @@ class SolarCell:
 
     def predict(self, parameters):
         result = self.model.predict(parameters)
-        return result
+        return result[0]
