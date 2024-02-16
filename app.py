@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request
 import pandas as pd
 import numpy as np
+from model import Windmill, SolarCell
 # from graphWT import plot_graph_WT
 # from graphSC import plot_graph_SC
 
@@ -33,9 +34,16 @@ def wind_turbine():
         windspeed_10m = float(request.form.get('windspeed_10m'))
         windspeed_100m = float(request.form.get('windspeed_100m'))
         windgusts_10m = float(request.form.get('windgusts_10m'))
+        
         parametersWindTurbine.extend([temperature_2m, relativehumidity_2m, dewpoint_2m, windspeed_10m, windspeed_100m, windgusts_10m])
         parametersWindTurbine = np.array(parametersWindTurbine)
         parametersWindTurbine = parametersWindTurbine.reshape(1, 6)
+        
+        windTurbine = Windmill()
+        returnedEfficiency = windTurbine.predict(parametersWindTurbine)
+        
+        return render_template('wind_turbine_index.html', returnedEfficiency=returnedEfficiency)
+    return render_template('wind_turbine_index.html')
         
         # def calculate_efficiency(power_out):
         #     efficiency = round((power_out / power_input) * 100, 2)
@@ -65,6 +73,7 @@ def wind_turbine():
     # data.index = data.index + 1
         
     # return render_template('wind_turbine_index.html', tables=[data.to_html()], titles=[''])
+    
 
 @app.route('/solar_cell',methods=['GET', 'POST'])
 def solar_cell():
@@ -87,6 +96,11 @@ def solar_cell():
         parametersSolarCell = np.array(parametersSolarCell)
         parametersSolarCell = parametersSolarCell.reshape(1, 11)
 
+        solarCell = SolarCell()
+        returnedEfficiency = solarCell.predict(parametersSolarCell)
+        
+        return render_template('solar_cell_index.html', returnedEfficiency=returnedEfficiency)
+    return render_template('solar_cell_index.html')
         # k=len(input_data_sc)
         # for i in range(0,k):
         #     if sdx.loc[i].item()==0.0:

@@ -99,24 +99,8 @@
         <div class="col-md-3">
          <div class="text-center">
          <h1 class="mb-4" style="font-family: 'Garamond', serif ;font-size: 35px;font-weight: bold;">Efficiency Table</h1>
-          
-            <table class="table table-bordered border-primary">
-              <thead class="table-primary">
-                <tr>
-                  <th colspan="20">
-                    {% for i in tables %}
-                      <h2>{{titles[loop.index]}}</h2>
-                      {{i | safe}} {% endfor %}
-                  </th>
-                </tr>
-              </thead>
-            </table>
+          {{ returnedEfficiency }}
           </div>
-        </div>
-    
-        <div class="col-md-8 offset-md-1">
-          <h1 class=" text-center mb-4" style="font-family: 'Garamond', serif ;font-size: 35px;font-weight: bold;">Efficiency Graph</h1>
-          <img src="{{ url_for('static', filename='graphWT.png') }}" class="img-fluid" alt="Efficiency Graph">
         </div>
       </div>
     </div>
