@@ -1,8 +1,12 @@
 from flask import Flask,render_template,request
 import numpy as np
 from model import Windmill, SolarCell
+from firebase import upload_file_to_storage, download_file_from_storage
 
 app = Flask(__name__)
+
+download_file_from_storage('model_data/solar_cell.sav', './models/solar_cell.sav')
+download_file_from_storage('model_data/wind_turbine.sav', './models/wind_turbine.sav')
 
 @app.route('/wind_turbine',methods=['GET', 'POST'])
 def wind_turbine():
@@ -54,9 +58,14 @@ def solar_cell():
         return render_template('solar_cell_index.html', returnedEfficiency=returnedEfficiency)
     return render_template('solar_cell_index.html')
 
+
+
 @app.route('/',methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
+
+# def app(request):
+#     return app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
