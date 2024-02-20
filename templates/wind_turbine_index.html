@@ -28,8 +28,28 @@
       border: 1px solid #000000; 
       }
     body {
-      background-color: #add8e6; 
-      }  
+      background-color: #ffffff;
+      }
+      .nav {
+          background-color: #222222;
+}
+      footer{
+        position:relative;
+        bottom:0;
+        background: #1d4355;
+        height: auto;
+        width:100vw;
+        font-family: sans-serif;
+        padding-top:5px;
+        color:#fff;
+    }
+    .footer-content{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
     
     
       
@@ -37,48 +57,40 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="text-center mt-1 mb-4">
-      <h2 style="font-family: 'Garamond', serif; font-size: 50px; color:#0000FF; font-weight: bold;">
-        <a href="/" id="website-heading">Energy Efficiency Calculator</a>
-      </h2>
-    </div>
-  </div>
-  <ul class="nav nav-pills nav-fill">
-    <li class="nav-item ms-2 me-1">
-      <a class="nav-link " href="/wind_turbine" style="font-family: 'Garamond', serif;font-size: 30px; background-color: #0000FF; color: #000000; font-weight: bold;" >Wind Turbine</a>
-    </li>
-    <li class="nav-item ms-1 me-2">
-      <a class="nav-link " href="/solar_cell" style="font-family: 'Garamond', serif ;font-size: 30px; background-color: #0000FF; color: #000000; font-weight: bold;">Solar Cell</a>
-    </li>
-  </ul>
+<nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">EffiTech.</a>
+        <a class="nav-link" href="#" style="margin-left:auto">Home</a>
+        <a class="nav-link" href="#" >Wind Turbine</a>
+        <a class="nav-link" href="#">SolarCell</a>
+        <a class="nav-link" href="#" >About Us</a>
+    </nav>
   <div class="container mt-5">
     <div class="row justify-content-end">
       <div class=" text-center col-md-6 ">
         <h1 class="mb-3 mt-3" style="font-family: 'Garamond', serif ;font-size: 50px;font-weight: bold;">Wind Turbine Efficiency</h1>
         <form method="post" class="custom-form">
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Temperature (2m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Temperature <br>(2m above ground):</label>
             <input type="text" class="form-control" id="temperature_2m" name="temperature_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Relative Humidity (2m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Relative Humidity <br>(2m above ground):</label>
             <input type="text" class="form-control" id="relativehumidity_2m" name="relativehumidity_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Dew Point (2m above ground) :</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Dew Point <br>(2m above ground) :</label>
             <input type="text" class="form-control" id="dewpoint_2m" name="dewpoint_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed (10m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed <br> (10m above ground):</label>
             <input type="text" class="form-control" id="windspeed_10m" name="windspeed_10m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed (100m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed <br> (100m above ground):</label>
             <input type="text" class="form-control" id="windspeed_100m" name="windspeed_100m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Gusts (10m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Gusts <br> (10m above ground):</label>
             <input type="text" class="form-control" id="windgusts_10m" name="windgusts_10m">
           </div>
           <div class="text-center">
@@ -88,11 +100,10 @@
     </div>
       <div class="col-md-6">
         <img src="https://credendo.com/sites/default/files/media/images/2023-09/Wind%20turbine%20offshore_Sept2023.jpg"
-          class="img-fluid rounded beautiful-border" alt="Wind Turbine" style="max-height: 400px;">
+          class="img-fluid rounded beautiful-border" alt="Wind Turbine" style="max-height: 400px; margin-top: 100px">
       </div>
     </div>
-
-
+<hr style="border-top: 1px dashed">
 
     <div class="container mt-5">
       <div class="row">
@@ -104,8 +115,26 @@
         </div>
       </div>
     </div>
-    
-  </div>
+</div>
+    <footer>
+            <div class="footer-content">
+                <p style="
+                    font-family: 'Arial', serif;
+                    font-size: 20px;
+                    color: #ffffff;
+                    margin-left: 100px;
+                    margin-right: 100px;
+                ">
+                    We are a group of dedicated students from ZHCET(Zakir Husain College of
+                    Engineering and Technology with a passion for innovation and sustainable technology.
+                    Our journey began with a shared vision to revolutionize the energy sector by enhancing the
+                    efficiency of wind turbines, transformers and various other systems.<br><br>
+                    <button type="button" class="btn btn-secondary btn-lg">Email Us: example@example.com</button>&ensp;&ensp;&ensp;&ensp;
+                    <button type="button" class="btn btn-secondary btn-lg">Contact us: +91 12345 67890</button>
+
+                </p>
+            </div>
+        </footer>
 </body>
 
 </html>
