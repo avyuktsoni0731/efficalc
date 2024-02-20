@@ -7,6 +7,10 @@
   <title>Wind Turbine Efficiency</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
   <style>
     .beautiful-border {
       border: 5px solid #3498db;
@@ -31,8 +35,19 @@
       background-color: #ffffff;
       }
       .nav {
-          background-color: #222222;
-}
+        background-color: #222222;
+        padding: 20px;
+      }
+      #homepage {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+      .nav a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
       footer{
         position:relative;
         bottom:0;
@@ -58,39 +73,39 @@
 
 <body>
 <nav class="nav">
-        <a class="nav-link active" aria-current="page" href="#">EffiTech.</a>
-        <a class="nav-link" href="#" style="margin-left:auto">Home</a>
-        <a class="nav-link" href="#" >Wind Turbine</a>
-        <a class="nav-link" href="#">SolarCell</a>
+        <a class="nav-link active" id="homepage" aria-current="page" href="/">PowerOptima</a>
+        <a class="nav-link" href="/" style="margin-left:auto">Home</a>
+        <a class="nav-link" href="/wind_turbine" >Wind Turbine</a>
+        <a class="nav-link" href="/solar_cell">Solar Cell</a>
         <a class="nav-link" href="#" >About Us</a>
     </nav>
   <div class="container mt-5">
     <div class="row justify-content-end">
       <div class=" text-center col-md-6 ">
-        <h1 class="mb-3 mt-3" style="font-family: 'Garamond', serif ;font-size: 50px;font-weight: bold;">Wind Turbine Efficiency</h1>
+        <h1 class="mb-3 mt-3" style="font-family: 'Poppins', sans-serif;font-size: 50px;font-weight: bold;">Wind Turbine Efficiency</h1>
         <form method="post" class="custom-form">
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Temperature <br>(2m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Temperature <br>(2m above ground):</label>
             <input type="text" class="form-control" id="temperature_2m" name="temperature_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Relative Humidity <br>(2m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Relative Humidity <br>(2m above ground):</label>
             <input type="text" class="form-control" id="relativehumidity_2m" name="relativehumidity_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Dew Point <br>(2m above ground) :</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Dew Point <br>(2m above ground) :</label>
             <input type="text" class="form-control" id="dewpoint_2m" name="dewpoint_2m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed <br> (10m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Wind Speed <br> (10m above ground):</label>
             <input type="text" class="form-control" id="windspeed_10m" name="windspeed_10m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Speed <br> (100m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Wind Speed <br> (100m above ground):</label>
             <input type="text" class="form-control" id="windspeed_100m" name="windspeed_100m">
           </div>
           <div class="mb-3 text-center">
-            <label for="rotorRadius" class="form-label" style="font-family: 'Garamond', serif; color: #0000ff; font-weight: bold; font-size: 30px;">Wind Gusts <br> (10m above ground):</label>
+            <label for="rotorRadius" class="form-label" style="font-family: 'Poppins', sans-serif; color: #0000ff; font-weight: bold; font-size: 1.5rem;">Wind Gusts <br> (10m above ground):</label>
             <input type="text" class="form-control" id="windgusts_10m" name="windgusts_10m">
           </div>
           <div class="text-center">
@@ -109,7 +124,7 @@
       <div class="row">
         <div class="col-md-3">
          <div class="text-center">
-         <h1 class="mb-4" style="font-family: 'Garamond', serif ;font-size: 35px;font-weight: bold;">Efficiency Table</h1>
+         <h1 class="mb-4" style="font-family: 'Poppins', sans-serif;font-size: 35px;font-weight: bold;">Efficiency</h1>
           {{ returnedEfficiency }}
           </div>
         </div>
@@ -120,17 +135,17 @@
             <div class="footer-content">
                 <p style="
                     font-family: 'Arial', serif;
-                    font-size: 20px;
+                    font-size: 1.5rem;
                     color: #ffffff;
                     margin-left: 100px;
                     margin-right: 100px;
                 ">
-                    We are a group of dedicated students from ZHCET(Zakir Husain College of
+                    We are a group of dedicated students from ZHCET (Zakir Husain College of
                     Engineering and Technology with a passion for innovation and sustainable technology.
                     Our journey began with a shared vision to revolutionize the energy sector by enhancing the
                     efficiency of wind turbines, transformers and various other systems.<br><br>
-                    <button type="button" class="btn btn-secondary btn-lg">Email Us: example@example.com</button>&ensp;&ensp;&ensp;&ensp;
-                    <button type="button" class="btn btn-secondary btn-lg">Contact us: +91 12345 67890</button>
+                    <button type="button" class="btn btn-secondary btn-lg">Email Us: soniavyukt3@gmail.com</button>&ensp;&ensp;&ensp;&ensp;
+                    <button type="button" class="btn btn-secondary btn-lg">Contact us: +91 63994 54765</button>
 
                 </p>
             </div>

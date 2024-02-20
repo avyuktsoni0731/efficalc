@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Energy Efficiency Calculator</title>
@@ -10,48 +10,72 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         background-color: #ffffff;
       }
       .nav {
-          background-color: #222222;
-}
-      footer{
-        position:relative;
-        bottom:0;
+        background-color: #222222;
+        padding: 20px;
+      }
+      #homepage {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+      .nav a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      footer {
+        position: relative;
+        bottom: 0;
         background: #1d4355;
         height: auto;
-        width:100vw;
+        width: 100vw;
         font-family: sans-serif;
-        padding-top:5px;
-        color:#fff;
-    }
-    .footer-content{
-        display:flex;
-        align-items:center;
+        padding-top: 5px;
+        color: #fff;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         text-align: center;
-    }
-
+      }
+      div {
+        padding: 20px;
+      }
     </style>
   </head>
-<body>
+  <body>
     <nav class="nav">
-        <a class="nav-link active" aria-current="page" href="#">EffiTech.</a>
-        <a class="nav-link" href="#" style="margin-left:auto">Home</a>
-        <a class="nav-link" href="#" >Wind Turbine</a>
-        <a class="nav-link" href="#">SolarCell</a>
-        <a class="nav-link" href="#" >About Us</a>
+      <a class="nav-link active" id="homepage" aria-current="page" href="#"
+        >PowerOptima</a
+      >
+      <a class="nav-link" href="#" style="margin-left: auto">Home</a>
+      <a class="nav-link" href="/wind_turbine">Wind Turbine</a>
+      <a class="nav-link" href="/solar_cell">Solar Cell</a>
+      <a class="nav-link" href="#">About Us</a>
     </nav>
-    <img src="img1.jpg" width="100%" style="max-height: 600px" style="margin-top: 0px">
+    <img
+      src="../static/img1.jpg"
+      width="100%"
+      style="max-height: 600px"
+      style="margin-top: 0px"
+    />
 
     <div class="text-center mt-6">
       <h4
         style="
-          font-family: 'Garamond', serif;
-          font-size: 30px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 2.5rem;
           color: #000000;
           font-weight: bold;
           margin-top: 20px;
@@ -64,7 +88,7 @@
       <p
         style="
           font-family: 'Arial', serif;
-          font-size: 20px;
+          font-size: 1.8rem;
           color: #000000;
           margin: 10px 25px 20px;
         "
@@ -73,15 +97,14 @@
         Calculator. Tailored for diverse systems, it provides quick insights,
         enabling sustainable and cost-effective decisions.
       </p>
-        <hr style="border-top: 2px dashed">
+      <hr style="border-top: 2px dashed" />
     </div>
 
     <div class="text-center mt-6">
-
       <h4
         style="
-          font-family: 'Garamond', serif;
-          font-size: 30px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 2.5rem;
           color: #000000;
           font-weight: bold;
           margin-top: 30px;
@@ -89,35 +112,43 @@
       >
         SolarCell Efficiency
       </h4>
-        <img alt="SolarPanel" src="solar.png"  style="float:right; object-fit: fill; min-width: 150px; max-height: 200px" >
-
+      <img
+        alt="SolarPanel"
+        src="../static/solar.png"
+        style="float: right; object-fit: fill; width: 350px"
+      />
     </div>
     <div class="text-justify mt-4">
-            <p style="
+      <p
+        style="
           font-family: 'Arial', serif;
-          font-size: 20px;
+          font-size: 1.8rem;
           color: #000000;
           margin: 20px 20px 0;
-        ">
-                      Want to install a solar panel at your home? Worried about its efficiency?
-                Worry not! Find how efficient your installation would be. Just enter
-                the environmental parameters like temperature, humidity, cloud cover,
-                solar radiation etc. and find out how much you could save in your electricity
-                costs.
-                <br><br><button type="button" class="btn btn-dark">Find Out Now!</button>
-            </p>
-
-
-  </div>
-    <br><hr style="border-top: 1px dashed"><br>
+        "
+      >
+        Want to install a solar panel at your home? Worried about its
+        efficiency? Worry not! Find how efficient your installation would be.
+        Just enter the environmental parameters like temperature, humidity,
+        cloud cover, solar radiation etc. and find out how much you could save
+        in your electricity costs.
+        <br /><br /><button type="button" class="btn btn-dark">
+          <a class="nav-link" href="/solar_cell" style="margin-left: auto"
+            >Find Out Now!</a
+          >
+        </button>
+      </p>
+    </div>
+    <br />
+    <hr style="border-top: 1px dashed" />
+    <br />
     <div class="text-center mt-6">
       <h4
         style="
-          font-family: 'Garamond', serif;
-          font-size: 30px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 2.5rem;
           color: #000000;
           font-weight: bold;
-
         "
       >
         Wind Turbine Efficiency
@@ -125,44 +156,60 @@
     </div>
 
     <div class="text-justify mt-4">
-            <img alt="Windmill" src="windmill.png" style="float: right; object-fit: fill; min-width: 130px; max-height: 250px;">
+      <img
+        alt="Windmill"
+        src="../static/windmill.png"
+        style="float: right; object-fit: fill; width: 250px"
+      />
 
-        <p style="
+      <p
+        style="
           font-family: 'Arial', serif;
-          font-size: 20px;
+          font-size: 1.8rem;
           color: #000000;
           margin: 20px 20px 20px;
-        ">
+        "
+      >
+        Our model simplifies the process of assessing average wind turbine
+        efficiency that on can achieve given the average or present
+        environmental parameters like wind speed, humidity, temperature, etc. of
+        the installation site. Say goodbye to complex calculations and hello to
+        streamlined efficiency analysis with our intuitive tool.
 
-                Our model simplifies the process of assessing average wind turbine efficiency
-                that on can achieve given the average or present environmental parameters like
-                wind speed, humidity, temperature, etc. of the installation site. Say goodbye to
-                complex calculations and hello to streamlined efficiency analysis with our
-                intuitive tool.
-
-              <br> <br> <button type="button" class="btn btn-dark">Find Out Now!</button>
-            </p>
-
-
-  </div><br><br><br>
+        <br />
+        <br />
+        <button type="button" class="btn btn-dark">
+          <a class="nav-link" href="/wind_turbine" style="margin-left: auto"
+            >Find Out Now!</a
+          >
+        </button>
+      </p>
+    </div>
+    <br /><br /><br />
     <footer>
-            <div class="footer-content">
-                <p style="
-                    font-family: 'Arial', serif;
-                    font-size: 20px;
-                    color: #ffffff;
-                    margin-left: 100px;
-                    margin-right: 100px;
-                ">
-                    We are a group of dedicated students from ZHCET(Zakir Husain College of
-                    Engineering and Technology with a passion for innovation and sustainable technology.
-                    Our journey began with a shared vision to revolutionize the energy sector by enhancing the
-                    efficiency of wind turbines, transformers and various other systems.<br><br>
-                    <button type="button" class="btn btn-secondary btn-lg">Email Us: example@example.com</button>&ensp;&ensp;&ensp;&ensp;
-                    <button type="button" class="btn btn-secondary btn-lg">Contact us: +91 12345 67890</button>
-
-                </p>
-            </div>
-        </footer>
+      <div class="footer-content">
+        <p
+          style="
+            font-family: 'Arial', serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-left: 100px;
+            margin-right: 100px;
+          "
+        >
+          We are a group of dedicated students from ZHCET (Zakir Husain College
+          of Engineering and Technology with a passion for innovation and
+          sustainable technology. Our journey began with a shared vision to
+          revolutionize the energy sector by enhancing the efficiency of wind
+          turbines, transformers and various other systems.<br /><br />
+          <button type="button" class="btn btn-secondary btn-lg">
+            Email Us: soniavyukt3@gmail.com</button
+          >&ensp;&ensp;&ensp;&ensp;
+          <button type="button" class="btn btn-secondary btn-lg">
+            Contact us: +91 63994 54765
+          </button>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
