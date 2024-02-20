@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request
 import numpy as np
 from model import Windmill, SolarCell
-from firebase import upload_file_to_storage, download_file_from_storage
+from firebase import download_file_from_storage
 
 app = Flask(__name__)
 
@@ -63,9 +63,6 @@ def solar_cell():
 @app.route('/',methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
-
-# def app(request):
-#     return app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
