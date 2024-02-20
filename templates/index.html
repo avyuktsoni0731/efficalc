@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Energy Efficiency Calculator</title>
@@ -12,13 +12,43 @@
     />
     <style>
       body {
-        background-color: #add8e6;
+        background-color: #ffffff;
       }
+      .nav {
+          background-color: #222222;
+}
+      footer{
+        position:relative;
+        bottom:0;
+        background: #1d4355;
+        height: auto;
+        width:100vw;
+        font-family: sans-serif;
+        padding-top:5px;
+        color:#fff;
+    }
+    .footer-content{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
     </style>
   </head>
-  <body>
+<body>
+    <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">EffiTech.</a>
+        <a class="nav-link" href="#" style="margin-left:auto">Home</a>
+        <a class="nav-link" href="#" >Wind Turbine</a>
+        <a class="nav-link" href="#">SolarCell</a>
+        <a class="nav-link" href="#" >About Us</a>
+    </nav>
+    <img src="img1.jpg" width="100%" style="margin-top: 0px">
     <div class="container">
-      <div class="text-center mt-1 mb-4">
+
+<!--      <div class="text-center mt-1 mb-4">
         <h1
           style="
             font-family: 'Garamond', serif;
@@ -30,8 +60,9 @@
           <a href="/" id="website-heading">Energy Efficiency Calculator</a>
         </h1>
       </div>
+      -->
     </div>
-    <ul class="nav nav-pills nav-fill">
+<!--    <ul class="nav nav-pills nav-fill">
       <li class="nav-item ms-2 me-1">
         <a
           class="nav-link"
@@ -61,28 +92,27 @@
         >
       </li>
     </ul>
+    -->
     <div class="text-center mt-6">
-      <h2
+      <h4
         style="
           font-family: 'Garamond', serif;
-          font-size: 50px;
+          font-size: 30px;
           color: #000000;
           font-weight: bold;
-          margin-top: 100px;
+          margin-top: 20px;
         "
       >
         Maximize Sustainability, Minimize Costs
-      </h2>
+      </h4>
     </div>
     <div class="text-center mt-4">
       <p
         style="
           font-family: 'Arial', serif;
-          font-size: 30px;
+          font-size: 20px;
           color: #000000;
-          margin-left: 25px;
-          margin-right: 25px;
-          margin-top: 40px;
+          margin: 10px 25px 20px;
         "
       >
         Optimize energy usage effortlessly with our web-based Energy Efficiency
@@ -90,5 +120,88 @@
         enabling sustainable and cost-effective decisions.
       </p>
     </div>
+    <div class="text-center mt-6">
+      <h4
+        style="
+          font-family: 'Garamond', serif;
+          font-size: 30px;
+          color: #000000;
+          font-weight: bold;
+          margin-top: 30px;
+        "
+      >
+        SolarCell Efficiency
+      </h4>
+    </div>
+    <div class="text-justify mt-4">
+        <img alt="SolarPanel" src="solar.png" width="25%" style="float:right; object-fit: fill; min-width: 150px; max-width: 350px" >
+
+            <p style="
+          font-family: 'Arial', serif;
+          font-size: 20px;
+          color: #000000;
+          margin: 20px 25px 0;
+        ">
+                      Want to install a solar panel at your home? Worried about its efficiency?
+                Worry not! Find how efficient your installation would be. Just enter
+                the environmental parameters like temperature, humidity, cloud cover,
+                solar radiation etc. and find out how much you could save in your electricity
+                costs.
+                <br><br><button type="button" class="btn btn-dark">Find Out Now!</button>
+            </p>
+
+
+  </div><br><br><br>
+    <div class="text-center mt-6">
+      <h4
+        style="
+          font-family: 'Garamond', serif;
+          font-size: 30px;
+          color: #000000;
+          font-weight: bold;
+
+        "
+      >
+        Wind Turbine Efficiency
+      </h4>
+    </div>
+    <div class="text-justify mt-4">
+        <p style="
+          font-family: 'Arial', serif;
+          font-size: 20px;
+          color: #000000;
+          margin: 10px 25px 20px;
+        ">
+            <img alt="Windmill" src="windmill.png" width="20%" style="float: right; object-fit: contain; min-width: 150px; max-width: 250px">
+
+                Our model simplifies the process of assessing average wind turbine efficiency
+                that on can achieve given the average or present environmental parameters like
+                wind speed, humidity, temperature, etc. of the installation site. Say goodbye to
+                complex calculations and hello to streamlined efficiency analysis with our
+                intuitive tool.
+
+              <br> <br> <button type="button" class="btn btn-dark">Find Out Now!</button>
+            </p>
+
+
+  </div><br><br>
+    <footer>
+            <div class="footer-content">
+                <p style="
+                    font-family: 'Arial', serif;
+                    font-size: 20px;
+                    color: #ffffff;
+                    margin: 10px 25px 20px;
+                ">
+                    We are a group of dedicated students from ZHCET(Zakir Husain College of
+                    Engineering and Technology with a passion for innovation and sustainable technology.
+                    journey began with a shared vision to revolutionize the energy sector by enhancing the
+                    efficiency of wind turbines, transformers and various other systems.<br><br>
+                    <button type="button" class="btn btn-secondary btn-lg">Email Us: example@example.com</button>&ensp;&ensp;&ensp;&ensp;
+                    <button type="button" class="btn btn-secondary btn-lg">Contact us: +91 12345 67890</button>
+
+                </p>
+            </div>
+        </footer>
   </body>
 </html>
