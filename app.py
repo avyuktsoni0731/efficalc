@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 download_file_from_storage('model_data/solar_cell.sav', './models/solar_cell.sav')
 download_file_from_storage('model_data/wind_turbine.sav', './models/wind_turbine.sav')
+eff = "Efficiency"
 
 @app.route('/wind_turbine',methods=['GET', 'POST'])
 def wind_turbine():
@@ -28,7 +29,7 @@ def wind_turbine():
         returnedEfficiency = round(windTurbine.predict(parametersWindTurbine), 6)*100
         rf = (f"{returnedEfficiency}%")
         
-        return render_template('wind_turbine_index.html', rf=rf)
+        return render_template('wind_turbine_index.html', rf=rf, eff=eff)
     return render_template('wind_turbine_index.html')
     
     
@@ -58,7 +59,7 @@ def solar_cell():
         rf = (f"{returnedEfficiency}%")
 
         
-        return render_template('solar_cell_index.html', rf=rf)
+        return render_template('solar_cell_index.html', rf=rf, eff=eff)
     return render_template('solar_cell_index.html')
 
 
