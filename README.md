@@ -1,14 +1,14 @@
-# Efficalc - Energy Efficiency Calculator
+# PowerOptima - Energy Efficiency Calculator
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
-- EffiCalc is a helpful tool that solves problems related to how we use energy. It helps us use our resources better, save money by using less energy, and be kinder to the environment. It's easy to use for everyone and can handle a lot of people using it at the same time. In a nutshell, this project is all about making it easier for everyone to save energy and money while being good to our planet.
+- PowerOptima is a helpful tool that solves problems related to how we use energy. It helps us use our resources better, save money by using less energy, and be kinder to the environment. It's easy to use for everyone and can handle a lot of people using it at the same time. In a nutshell, this project is all about making it easier for everyone to save energy and money while being good to our planet.
   
 ## Demo
 
-**YouTube link to video demo->** [Link](https://youtu.be/gHkhUAnaXRo)
+**YouTube link to video demo->** [Link](https://youtu.be/vJA06WuAZdM)
 
 ## Getting Started
 
