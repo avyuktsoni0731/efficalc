@@ -1,8 +1,8 @@
 # PowerOptima - Energy Efficiency Calculator
 
 
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/1.png" alt="PowerOptima Banner" width="480px" align="left">
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/6.png" alt="PowerOptima Banner" width="480px" align="right">
+<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/1.png" alt="PowerOptima Banner" width="480px">
+<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/6.png" alt="PowerOptima Banner" width="480px">
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
