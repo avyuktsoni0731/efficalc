@@ -21,12 +21,16 @@ A team of passionate developers from GDSC ZHCET, affiliated with Zakir Husain Co
 - Sania Siddiqui - Non-GDSC Member [GitHub Profile](https://github.com/saniasiddiqui231)
 
 ### Solar Cell
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/2.png" alt="Solar Cell Page" width="480px" align="left">
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/3.png" alt="Solar Cell Page" width="480px" aligh="right">
+<p float="left">
+  <img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/2.png" alt="PowerOptima Banner" width="400px">
+  <img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/3.png" alt="PowerOptima Banner" width="400px">
+</p>
 
 ### Wind Turbine
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/4.png" alt="Wind Turbine Page" width="480px" align="left">
-<img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/5.png" alt="Wind Turbine Page" width="480px" aligh="right">
+<p float="left">
+  <img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/4.png" alt="PowerOptima Banner" width="400px">
+  <img src="https://github.com/avyuktsoni0731/efficalc/blob/main/images/5.png" alt="PowerOptima Banner" width="400px">
+</p>
 
   
 ## Demo and PPT for Google Solution Challenge
